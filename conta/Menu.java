@@ -13,7 +13,7 @@ public class Menu {
 
 			System.out.println("*****************************************************");
 			System.out.println("                                                     ");
-			System.out.println("              BNL - BANCO NACIONAL DO SIB           ");
+			System.out.println("              BNL - BANCO NACIONAL SIB               ");
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("                                                     ");
@@ -34,7 +34,7 @@ public class Menu {
 			opcao = leia.nextInt();
 
 			if (opcao == 9) {
-				System.out.println("\nBanco Nacional do Luis - O seu Futuro começa aqui!");
+				System.out.println("\nBanco Nacional Sib - O seu Futuro começa aqui!");
 				sobre();
                  leia.close();
 				System.exit(0);
