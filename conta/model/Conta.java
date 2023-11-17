@@ -1,5 +1,7 @@
 package conta.model;
 
+import conta.util.Cores;
+
 public class Conta {
 
 	//criando atributos da classe conta
@@ -64,9 +66,10 @@ public class Conta {
 		if(this.getSaldo() < valor) {
 			System.out.println("\nSaldo Insuficiente!");
 			return false;
+		}else {
+			this.setSaldo(this.getSaldo() - valor);
+			return true;
 		}
-		this.setSaldo(this.getSaldo() - valor);
-		return true;
 	}
 	
 	public void depositar(float valor) {
@@ -85,13 +88,14 @@ public class Conta {
 			break;
 		}
 		
-		System.out.println("\n\n***********************************************************");
-		System.out.println("Dados da Conta:");
-		System.out.println("***********************************************************");
-		System.out.println("Numero da Conta: " + this.numero);
-		System.out.println("Agência: " + this.agencia);
-		System.out.println("Tipo da Conta: " + tipo);
-		System.out.println("Titular: " + this.titular);
-		System.out.println("Saldo: " + this.saldo);
+		System.out.println(Cores.ANSI_BLUE_BACKGROUND+"\n\n**************************************************");
+		System.out.println("	Dados da Conta:                           ");
+		System.out.println("**************************************************");
+		System.out.println("	Numero da Conta: " + this.numero+"                        ");
+		System.out.println("	Agência: " + this.agencia + "                              ");
+		System.out.println("	Tipo da Conta: " + tipo + "             ");
+		System.out.println("	Titular: " + this.titular + "                          ");
+		System.out.println("	Saldo: " + this.saldo+"                            ");
+		System.out.println("**************************************************\n");
 	}
 }
