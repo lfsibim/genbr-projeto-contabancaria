@@ -2,10 +2,20 @@ package conta;
 
 import java.util.Scanner;
 import conta.util.Cores;
+import conta.model.Conta;
 
 public class Menu {
 
 	public static void main(String[] args) {
+		
+		//testando classe conta
+		Conta c1 = new Conta(1, 123, 1, "Adriana", 10000.0f);
+		c1.visualizar();
+		c1.sacar(12000.0f);
+		c1.visualizar();
+		c1.depositar(5000.0f);
+		c1.visualizar();
+		
 		Scanner leia = new Scanner(System.in);
 
 		int opcao;
@@ -13,21 +23,21 @@ public class Menu {
 		while (true) {
 
 			System.out.println(Cores.TEXT_WHITE_BRIGHT+Cores.ANSI_BLUE_BACKGROUND+"*****************************************************");
-			System.out.println("                                                     ");
-			System.out.println("              BNS - BANCO NACIONAL SIB               ");
-			System.out.println("                                                     ");
+			System.out.println("*                                                   *");
+			System.out.println("*              BNS - BANCO NACIONAL SIB             *");
+			System.out.println("*                                                   *");
 			System.out.println("*****************************************************");
-			System.out.println("                                                     ");
-			System.out.println("            1 - Criar Conta                          ");
-			System.out.println("            2 - Listar todas as Contas               ");
-			System.out.println("            3 - Buscar Conta por Numero              ");
-			System.out.println("            4 - Atualizar Dados da Conta             ");
-			System.out.println("            5 - Apagar Conta                         ");
-			System.out.println("            6 - Sacar                                ");
-			System.out.println("            7 - Depositar                            ");
-			System.out.println("            8 - Transferir valores entre Contas      ");
-			System.out.println("            9 - Sair                                 ");
-			System.out.println("                                                     ");
+			System.out.println("*                                                   *");
+			System.out.println("*            1 - Criar Conta                        *");
+			System.out.println("*            2 - Listar todas as Contas             *");
+			System.out.println("*            3 - Buscar Conta por Numero            *");
+			System.out.println("*            4 - Atualizar Dados da Conta           *");
+			System.out.println("*            5 - Apagar Conta                       *");
+			System.out.println("*            6 - Sacar                              *");
+			System.out.println("*            7 - Depositar                          *");
+			System.out.println("*            8 - Transferir valores entre Contas    *");
+			System.out.println("*            9 - Sair                               *");
+			System.out.println("*                                                   *");
 			System.out.println("*****************************************************");
 			System.out.println("Entre com a opção desejada:                          ");
 			System.out.println("                                                     "+Cores.TEXT_RESET);
@@ -82,10 +92,10 @@ public class Menu {
 	}
     
 	public static void sobre() {
-		System.out.println("\n*********************************************************");
-		System.out.println("Projeto Desenvolvido por: Luis Felipe Sibim ");
-		System.out.println("Generation Brasil - generation@generation.org");
-		System.out.println("github.com/lfsibim/genbr-projeto-contabancaria");
-		System.out.println("*********************************************************");
+		System.out.println(Cores.ANSI_WHITE_BACKGROUND+Cores.TEXT_BLACK_BOLD+"\n-------------------------------------------------");
+		System.out.println(Cores.TEXT_BLACK_BOLD+"| Projeto Desenvolvido por: Luis Felipe Sibim   |");
+		System.out.println(Cores.TEXT_BLACK_BOLD+"| Generation Brasil - generation@generation.org |");
+		System.out.println(Cores.TEXT_BLACK_BOLD+"| github.com/lfsibim/genbr-projeto-contabancaria|");
+		System.out.println("-------------------------------------------------");
 	}
 }
