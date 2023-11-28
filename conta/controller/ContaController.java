@@ -12,7 +12,12 @@ public class ContaController implements ContaRepository {
 	
 	@Override
 	public void procurarPorNumero(int numero) {
-		// TODO Auto-generated method stub
+		var conta = buscarNaCollection(numero);
+		if(conta != null) {
+			conta.visualizar();
+		}else {
+			System.out.println("\nA Conta número " + numero + " não foi encontrada");
+		}
 		
 	}
 
@@ -63,5 +68,12 @@ public class ContaController implements ContaRepository {
 		return ++ numero;
 	}
 	
-
+	public Conta buscarNaCollection(int numero) {
+		for(var conta : listaContas) {
+			if(conta.getNumero() == numero) {
+				return conta;
+			}
+		}
+		return null;
+	}
 }
